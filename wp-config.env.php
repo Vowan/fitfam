@@ -25,7 +25,7 @@
  *
  */
 switch ($hostname) {
-    case 'fitfam.dev':
+    case 'localhost':
         define('WP_ENV', 'development');
         break;
     
