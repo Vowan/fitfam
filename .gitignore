@@ -31,7 +31,6 @@
 # -----------------------------------------------------------------
 
 # ignore everything in the root except the "wp-content" directory.
-/*
 !wp-content/
 
 # ignore all files starting with .
@@ -100,3 +99,6 @@ wp-content/themes/twenty*/
 node_modules/
 .gitignore
 .idea/
+
+# ignore environment files
+wp-config.development.php
