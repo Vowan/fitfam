@@ -25,14 +25,12 @@
  *
  */
 switch ($hostname) {
-    case 'localhost':
+    case 'fitfam.dev':
         define('WP_ENV', 'development');
-        break;
-    
-    case 'stage.beta.fitfam.tv':
+	    break;
+    case 'stage.fitfam.tv':
         define('WP_ENV', 'staging');
         break;
-
     case 'beta.fitfam.tv':
     default: 
         define('WP_ENV', 'production');
