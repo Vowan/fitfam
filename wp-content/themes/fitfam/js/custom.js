@@ -1,3 +1,137 @@
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+function check_register ()
+{
+    if ($('[name=reg_name]').val() == "")
+    {
+        msg = "You can't leave this empty";
+        $('#reg_name').after('<div id="error" class="error">'+msg+'</div>');
+        setTimeout(function(){
+            var parent = document.getElementById("row-reg-name");
+            var child = document.getElementById("error");
+            parent.removeChild(child);
+        }, 3000);
+
+        return false;
+    }
+    else if ($('[name=reg_pass]').val() == "")
+    {
+        msg = "You can't leave this empty";
+        $('#reg_pass').after('<div id="error" class="error">'+msg+'</div>');
+        setTimeout(function(){
+            var parent = document.getElementById("row-reg-pass");
+            var child = document.getElementById("error");
+            parent.removeChild(child);
+        }, 3000);
+
+        return false;
+    }
+    else if ($('[name=reg_pass]').val().length < 8)
+    {
+        msg = "Password must contain at least 8 characters!";
+        $('#reg_pass').after('<div id="error" class="error">'+msg+'</div>');
+        setTimeout(function(){
+            var parent = document.getElementById("row-reg-pass");
+            var child = document.getElementById("error");
+            parent.removeChild(child);
+        }, 3000);
+
+        return false;
+    }
+    else if ($('[name=reg_email]').val() == "")
+    {
+        msg = "You can't leave this empty";
+        $('#reg_email').after('<div id="error" class="error">'+msg+'</div>');
+        setTimeout(function(){
+            var parent = document.getElementById("row-reg-email");
+            var child = document.getElementById("error");
+            parent.removeChild(child);
+        }, 3000);
+
+        return false;
+    }
+    else if (!/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/.test($('[name=reg_email]').val()))
+    {
+        msg = "A valid email address is required";
+        $('#reg_email').after('<div id="error" class="error">'+msg+'</div>');
+        setTimeout(function(){
+            var parent = document.getElementById("row-reg-email");
+            var child = document.getElementById("error");
+            parent.removeChild(child);
+        }, 3000);
+
+        return false;
+    }
+
+    else return true;
+
+}
+
+$(function () {
+
+    var login = getUrlVars()["login"];
+    if (login == 'failed#' || login == 'failed')
+    {
+        $('.modal-overlay').fadeIn(200);
+        $('.modal-login').fadeIn(200);
+    }
+
+    if (window.location.hash == '#_=_'){
+        history.replaceState
+            ? history.replaceState(null, null, window.location.href.split('#')[0])
+            : window.location.hash = '';
+    }
+    // modal close
+    $('.modal-close').on('click', function() {
+        $('.modal-overlay').fadeOut(100);
+        $('.modal-log').fadeOut(100);
+        $('.cart-modal').fadeOut(100);
+        $('#home').css('overflow-y', 'auto');
+    });
+
+    // Modals
+    $('#login-button').on('click', function() {
+        $('.modal-overlay').fadeIn(200);
+        $('.modal-login').fadeIn(200);
+        $('#home').css('overflow', 'hidden');
+    });
+
+    $('.modal-overlay').on('click', function(e) {
+        if (e.target !== this)
+            return;
+        else
+            $('.modal-close').click();
+    });
+
+    $('#signUp-button').on('click', function() {
+
+        $('#form-login').hide();
+        $('#form-registration').show();
+        $('.tabs').find('.selected').removeClass('selected');
+        $(this).addClass('selected');
+        $('#home').css('overflow', 'hidden');
+    });
+
+    $('#logIn-button').on('click', function() {
+        $('#form-login').show();
+        $('#form-registration').hide();
+        $('.tabs').find('.selected').removeClass('selected');
+        $(this).addClass('selected');
+    });
+
+    $('#signup-button').on('click', function() {
+        $('.modal-overlay').fadeIn(200);
+        $('.modal-login').fadeIn(200);
+        $('#signUp-button').click();
+    });
+});
+
 var leftToggle = false;
 
 $(document).ready(function() {

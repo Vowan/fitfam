@@ -414,4 +414,80 @@ get_header(); ?>
           </div>
        </div>
     </div>
+
+<div class="modal-overlay">
+<div class="modal-log modal-login">
+    <i class="modal-close"></i>
+    <h2>Login</h2>
+    <div class="f-section">
+        <ul class="tabs">
+            <li id="logIn-button" class="tab selected"><a href="#">Log In</a></li>
+            <li id="signUp-button" class="tab"><a href="#">Sign Up</a></li>
+        </ul>
+    </div>
+
+    <div class="form" id="form-login">
+        <form action="<?php echo wp_login_url(get_permalink()); ?>" id="loginForm" name="login_form" method="post">
+            <div class="f-section" id="row-email">
+                <label for="">Email</label>
+                <input type="email" class="cell" name="log" id="log">
+            </div>
+            <div class="f-section" id="row-pwd">
+                <label for="">Password</label>
+                <input type="password" class="cell" name="pwd" id="pwd">
+            </div>
+            <input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>" />
+            <a href="<?php echo get_site_url().'/?action=lostpassword'; ?>" class="forgot-pass">Forgot your passowd ?</a>
+            <?php
+            if(isset($_GET['login']) && $_GET['login'] == 'failed')
+            {
+                ?>
+                <div id="login-error" style="background-color: #FFEBE8;border:1px solid #C00;padding:5px;">
+                    <p>Failed login attempt: incorrect username or password.</p>
+                </div>
+                <?php
+            }
+
+            ?>
+            <button onclick="var check =  checkLogin(); if (!check) {return false;}">Login</button>
+
+            <div class="or">
+                <p>or</p>
+            </div>
+
+            <a href="<?php echo esc_url( get_template_directory_uri() ); ?>/auth/auth_social_fb.php" class="fb-login"><img src="<?php bloginfo('template_url'); ?>/img/fb_btn.png"></a>
+        </form>
+    </div>
+
+    <div class="form" id="form-registration">
+        <form action="<?php echo $_SERVER['REQUEST_URI'] ?>" id="regForm" method="post">
+            <div class="f-section" id="row-reg-name">
+                <label for="">Username</label>
+                <input type="text" class="cell" name="reg_name" id="reg_name">
+            </div>
+            <div class="f-section" id="row-reg-pass">
+                <label for="" id="row-reg-pass">Password</label>
+                <input type="password" class="cell" name="reg_pass" id="reg_pass">
+            </div>
+            <div class="f-section" id="row-reg-email">
+                <label for="">Email</label>
+                <input type="email" class="cell" name="reg_email" id="reg_email">
+            </div>
+
+            <div class="f-section">
+                <div style="padding-left: 49px;" class="g-recaptcha" data-sitekey="6LfBrxIUAAAAAGXpLXLeUVOmIV9xMhUPTJaEm7kK"></div>
+            </div>
+
+            <button onclick="var check =  check_register(); if (!check) {return false;}">Sign Up</button>
+
+            <div class="or">
+                <p>or</p>
+            </div>
+
+            <a href="<?php echo esc_url( get_template_directory_uri() ); ?>/auth/auth_social_fb.php" class="fb-login"><img src="<?php bloginfo('template_url'); ?>/img/fb_btn.png"></a>
+        </form>
+      <?php register_user(); ?>
+    </div>
+</div>
+</div>
  <?php get_footer();?>   

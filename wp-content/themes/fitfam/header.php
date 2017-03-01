@@ -8,6 +8,9 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:400,900,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,900" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src='http://www.google.com/recaptcha/api.js'></script>
+    
 </head>
 
 <body id="home">
@@ -36,8 +39,8 @@
                     <li>Browse</li>
                     <li>About</li>
                     <li>Blog</li>
-                    <li>Login</li>
-                    <li>
+                    <li id="login-button" style="cursor: pointer">Login</li>
+                    <li id="signup-button">
                         <button class="btn skewed btn-sign-up"><span class="unskew">Sign Up</span></button>
                     </li>
                 </ul>
