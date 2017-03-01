@@ -24,7 +24,11 @@
  *   case 'localhost':
  *
  */
+
 switch ($hostname) {
+    case 'dap-it.pro/puplic/fitfam':
+        define('WP_ENV', 'development');
+        break;
     case 'fitfam.dev':
         define('WP_ENV', 'development');
 	    break;

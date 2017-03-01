@@ -1144,3 +1144,229 @@ input[type="text"]#last:-ms-input-placeholder {
    float: left;
    position: relative;
 }
+
+
+/*login*/
+.modal-overlay {
+    background: rgba(0,0,0,.5);
+    display: none;
+    height: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    z-index: 99;
+    overflow: auto;
+
+}
+.modal-log {
+    margin: 50px auto;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #fff;
+    display: none;
+    overflow: hidden;
+    padding: 50px 100px;
+    max-width: 600px;
+    width: 100%;
+    z-index: 999;    position: relative;
+
+}
+.modal-log .modal-close {
+    background: url(../img/delete.png);
+    background-size: 100%;
+    cursor: pointer;
+    height: 14px;
+    top: 15px; right: 15px;
+    width: 14px;
+    position: absolute;
+}
+.modal-log h2 {
+    color: #000;
+    font-size: 30px;
+    font-family: "Lato";
+    letter-spacing: 0.085em;
+    margin-bottom: 40px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.modal-log .form .f-section {
+    margin-bottom: 20px;
+}
+.modal-log .form label {
+    display: block;
+    font-size: 14px;
+    font-family: "Lato";
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.modal-log .form .cell {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    height: 40px;
+    padding: 0 15px;
+    width: 100%;
+}
+.modal-log .register {
+    color: #696969;
+    display: block;
+    font-size: 12px;
+    font-family: "Lato";
+    line-height: 16px;
+    text-decoration: none;
+}
+.modal-log .register:hover {
+    color: #000;
+    text-decoration: underline;
+}
+.modal-log .forgot-pass {
+    color: #696969;
+    display: block;
+    font-size: 12px;
+    font-family: "Lato";
+    line-height: 16px;
+    text-decoration: none;
+}
+.modal-log .forgot-pass:hover {
+    color: #000;
+    text-decoration: underline;
+}
+.modal-log .form button {
+    background: #727272;
+    border: 1px solid #000;
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    font-family: "Lato";
+    letter-spacing: 0.085em;
+    height: 40px;
+    margin: 25px auto;
+    text-transform: uppercase;
+    width: 160px;
+}
+.modal-log .form button:hover {
+    color: #545454;
+}
+.modal-log .form .fb-login {
+    display: block;
+    height: 50px;
+    margin: 0 auto;
+    width: 260px;
+}
+.modal-log .form .fb-login img {
+    /*width: 100%;*/
+}
+.modal-log .or {
+    margin-bottom: 25px;
+    position: relative;
+    text-align: center;
+}
+.modal-log .or p {
+    background: #fff;
+    color: #000;
+    display: inline-block;
+    font-size: 14px;
+    font-family: "Lato";
+    margin: 0 auto;
+    padding: 0 10px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 1;
+}
+.modal-log .or:before {
+    background: #000;
+    content: '';
+    height: 1px;
+    position: absolute;
+    top: 50%; left: -50%;
+    width: 1000%;
+    z-index: -1;
+}
+
+.tabs{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    padding: 0;
+    margin-bottom: 3rem;
+    box-shadow: 0 -1px 0 #dad8de inset;
+}
+
+.tabs>li.selected>a
+{
+    color: #433f4a;
+}
+
+.tab:hover
+{
+    box-shadow: 0 -1px 0 #515a77 inset;
+    color: #433f4a;
+    text-decoration: none;
+}
+
+.tab a
+{
+    text-decoration: none;
+}
+
+.tab a:hover
+{
+    text-decoration: none;
+}
+
+.tab a:visited
+{
+    text-decoration: none;
+}
+
+.tab a:active
+{
+    text-decoration: none;
+}
+
+.tabs ul
+{
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+
+.tabs li
+{
+    transition: box-shadow .2s ease-out;
+    color: #242424;
+    margin-right: 2rem;
+    display: inline-block;
+    pointer: cursor;
+    padding-bottom: 5px;
+}
+
+.tabs .selected
+{
+    box-shadow: 0 -1px 0 #515a77 inset;
+    color: #433f4a;
+}
+
+.tab
+{
+    transition: box-shadow .2s ease-out;
+    color: #6441a4;
+    margin-right: 2rem;
+    display: inline-block;
+    pointer: cursor;
+}
+
+#form-registration
+{
+    display: none;
+}
