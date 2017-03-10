@@ -20,13 +20,13 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'wp_stagefitfam');
+define('DB_NAME', 'wp_testfitfam');
 
 /** MySQL database username */
-define('DB_USER', 'wp_stagefitfam');
+define('DB_USER', 'wp_testfitfam');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'j3v3bvznrCdWpW3');
+define('DB_PASSWORD', 'PYd3VP9MdVUVSWA');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -36,3 +36,10 @@ define('DB_CHARSET', 'utf8mb4');
 
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
+
+/** Set debug to true for debugging */
+define('WP_DEBUG', true);
+
+ini_set('error_reporting', E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
