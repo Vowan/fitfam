@@ -73,7 +73,6 @@ if (PHP_SAPI == "cli" && defined('WP_CLI_ROOT')) {
 // Filter
 $hostname = filter_var($hostname, FILTER_SANITIZE_STRING);
 
-$hostname = 'dap-it.pro/puplic/fitfam';
 // Try server hostname
 if (!defined('WP_ENV')) {
 	// Set environment based on hostname
