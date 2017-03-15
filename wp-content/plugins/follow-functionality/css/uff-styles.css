@@ -1,0 +1,16 @@
+.modal-dialog{
+      overflow-y: initial !important
+}
+.modal-body{
+  height: 450px;
+  overflow-y: auto;
+}
+
+#streamer-profile-draft{
+    display: none;
+    
+}
+
+.streamer-nicename, .streamer-email{
+   color: black !important; 
+}

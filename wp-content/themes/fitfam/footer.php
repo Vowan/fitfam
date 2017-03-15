@@ -16,7 +16,7 @@
        </div>
     </div>
     <script src="<?php bloginfo('template_directory');?>/js/custom.js"></script>
-
+<?php wp_footer(); ?>
 </body>
 
 </html>

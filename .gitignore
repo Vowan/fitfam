@@ -100,3 +100,5 @@ node_modules/
 # ignore environment files
 wp-config.development.php
 wp-config.env.php
+/Proba/nbproject/private/
+/nbproject/private/

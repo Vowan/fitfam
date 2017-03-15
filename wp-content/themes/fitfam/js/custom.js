@@ -1,75 +1,70 @@
 function getUrlVars() {
     var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
         vars[key] = value;
     });
     return vars;
 }
 
-function check_register ()
+function check_register()
 {
     if ($('[name=reg_name]').val() == "")
     {
         msg = "You can't leave this empty";
-        $('#reg_name').after('<div id="error" class="error">'+msg+'</div>');
-        setTimeout(function(){
+        $('#reg_name').after('<div id="error" class="error">' + msg + '</div>');
+        setTimeout(function () {
             var parent = document.getElementById("row-reg-name");
             var child = document.getElementById("error");
             parent.removeChild(child);
         }, 3000);
 
         return false;
-    }
-    else if ($('[name=reg_pass]').val() == "")
+    } else if ($('[name=reg_pass]').val() == "")
     {
         msg = "You can't leave this empty";
-        $('#reg_pass').after('<div id="error" class="error">'+msg+'</div>');
-        setTimeout(function(){
+        $('#reg_pass').after('<div id="error" class="error">' + msg + '</div>');
+        setTimeout(function () {
             var parent = document.getElementById("row-reg-pass");
             var child = document.getElementById("error");
             parent.removeChild(child);
         }, 3000);
 
         return false;
-    }
-    else if ($('[name=reg_pass]').val().length < 8)
+    } else if ($('[name=reg_pass]').val().length < 8)
     {
         msg = "Password must contain at least 8 characters!";
-        $('#reg_pass').after('<div id="error" class="error">'+msg+'</div>');
-        setTimeout(function(){
+        $('#reg_pass').after('<div id="error" class="error">' + msg + '</div>');
+        setTimeout(function () {
             var parent = document.getElementById("row-reg-pass");
             var child = document.getElementById("error");
             parent.removeChild(child);
         }, 3000);
 
         return false;
-    }
-    else if ($('[name=reg_email]').val() == "")
+    } else if ($('[name=reg_email]').val() == "")
     {
         msg = "You can't leave this empty";
-        $('#reg_email').after('<div id="error" class="error">'+msg+'</div>');
-        setTimeout(function(){
+        $('#reg_email').after('<div id="error" class="error">' + msg + '</div>');
+        setTimeout(function () {
             var parent = document.getElementById("row-reg-email");
             var child = document.getElementById("error");
             parent.removeChild(child);
         }, 3000);
 
         return false;
-    }
-    else if (!/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/.test($('[name=reg_email]').val()))
+    } else if (!/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/.test($('[name=reg_email]').val()))
     {
         msg = "A valid email address is required";
-        $('#reg_email').after('<div id="error" class="error">'+msg+'</div>');
-        setTimeout(function(){
+        $('#reg_email').after('<div id="error" class="error">' + msg + '</div>');
+        setTimeout(function () {
             var parent = document.getElementById("row-reg-email");
             var child = document.getElementById("error");
             parent.removeChild(child);
         }, 3000);
 
         return false;
-    }
-
-    else return true;
+    } else
+        return true;
 
 }
 
@@ -82,13 +77,13 @@ $(function () {
         $('.modal-login').fadeIn(200);
     }
 
-    if (window.location.hash == '#_=_'){
+    if (window.location.hash == '#_=_') {
         history.replaceState
-            ? history.replaceState(null, null, window.location.href.split('#')[0])
-            : window.location.hash = '';
+                ? history.replaceState(null, null, window.location.href.split('#')[0])
+                : window.location.hash = '';
     }
     // modal close
-    $('.modal-close').on('click', function() {
+    $('.modal-close').on('click', function () {
         $('.modal-overlay').fadeOut(100);
         $('.modal-log').fadeOut(100);
         $('.cart-modal').fadeOut(100);
@@ -96,20 +91,20 @@ $(function () {
     });
 
     // Modals
-    $('#login-button').on('click', function() {
+    $('#login-button').on('click', function () {
         $('.modal-overlay').fadeIn(200);
         $('.modal-login').fadeIn(200);
         $('#home').css('overflow', 'hidden');
     });
 
-    $('.modal-overlay').on('click', function(e) {
+    $('.modal-overlay').on('click', function (e) {
         if (e.target !== this)
             return;
         else
             $('.modal-close').click();
     });
 
-    $('#signUp-button').on('click', function() {
+    $('#signUp-button').on('click', function () {
 
         $('#form-login').hide();
         $('#form-registration').show();
@@ -118,14 +113,14 @@ $(function () {
         $('#home').css('overflow', 'hidden');
     });
 
-    $('#logIn-button').on('click', function() {
+    $('#logIn-button').on('click', function () {
         $('#form-login').show();
         $('#form-registration').hide();
         $('.tabs').find('.selected').removeClass('selected');
         $(this).addClass('selected');
     });
 
-    $('#signup-button').on('click', function() {
+    $('#signup-button').on('click', function () {
         $('.modal-overlay').fadeIn(200);
         $('.modal-login').fadeIn(200);
         $('#signUp-button').click();
@@ -134,8 +129,8 @@ $(function () {
 
 var leftToggle = false;
 
-$(document).ready(function() {
-    $('.bars-toggle').click(function() {
+$(document).ready(function () {
+    $('.bars-toggle').click(function () {
         if (leftToggle === false) {
             $(this).animate({
                 marginLeft: '160px'
@@ -158,8 +153,8 @@ $(document).ready(function() {
 
 var Toggle = false;
 
-$(document).ready(function() {
-    $('.index-toggle').click(function() {
+$(document).ready(function () {
+    $('.index-toggle').click(function () {
         if (Toggle === false) {
             $(this).animate({
                 marginRight: '160px'
@@ -182,8 +177,8 @@ $(document).ready(function() {
 
 var ToggleBig = false;
 
-$(document).ready(function() {
-    $('#large-dev-side').click(function() {
+$(document).ready(function () {
+    $('#large-dev-side').click(function () {
         if (ToggleBig === false) {
             $('.side-bar').animate({
                 marginLeft: '0px'
@@ -201,12 +196,12 @@ $(document).ready(function() {
 var bigMargin = 3;
 var length = $('.slide').length;
 
-$(document).ready(function() {
+$(document).ready(function () {
     $('.longer').css('width', 100 * length + '%');
     $('.longer').css('margin-left', '-200%');
     $('.slide').css('width', 100 / length + '%');
 
-    setInterval(function() {
+    setInterval(function () {
         if (bigMargin < length) {
             bigMargin++;
             $('.vid-div').removeClass('active-vid');
@@ -229,7 +224,7 @@ $(document).ready(function() {
     $('.tags').hide();
     $('.tags:nth-child(' + bigMargin + ')').fadeIn();
 
-    $('.gray-left').click(function() {
+    $('.gray-left').click(function () {
         if (bigMargin < length) {
             bigMargin++;
             $('.longer').animate({
@@ -240,9 +235,9 @@ $(document).ready(function() {
         }
     });
 
-    $('.vid-div').click(function() {
+    $('.vid-div').click(function () {
         if (bigMargin <= length) {
-           var Index = $(this).index();
+            var Index = $(this).index();
             bigMargin = Index + 1;
             var Position = (100 * bigMargin) - 100;
             $('.vid-div').removeClass('active-vid');
@@ -255,7 +250,7 @@ $(document).ready(function() {
         }
     });
 
-    $('.gray-right').click(function() {
+    $('.gray-right').click(function () {
         if (bigMargin > 1) {
             bigMargin--;
             $('.longer').animate({
@@ -269,7 +264,7 @@ $(document).ready(function() {
 
 });
 
-$('.press-left-bigger').click(function() {
+$('.press-left-bigger').click(function () {
     if (bigMargin < length) {
         bigMargin++;
         $('span.circle').removeClass('active-circle');
@@ -280,7 +275,7 @@ $('.press-left-bigger').click(function() {
     }
 });
 
-$('.press-right-bigger').click(function() {
+$('.press-right-bigger').click(function () {
     if (bigMargin > 1) {
         bigMargin--;
         $('span.circle').removeClass('active-circle');
@@ -298,7 +293,7 @@ var counterLen = $('.tags').length;
 $('.tags').hide();
 $('.tags:nth-child(' + counter + ')').fadeIn();
 
-$('.gray-right-channels').click(function() {
+$('.gray-right-channels').click(function () {
     if (counter > 1) {
         counter--;
         $('.tags').hide();
@@ -306,7 +301,7 @@ $('.gray-right-channels').click(function() {
     }
 });
 
-$('.gray-left-channels').click(function() {
+$('.gray-left-channels').click(function () {
     if (counter < counterLen) {
         counter++;
         $('.tags').hide();
@@ -314,7 +309,7 @@ $('.gray-left-channels').click(function() {
     }
 });
 
-$('#video-flip').click(function(){
-   $('#video-panel').slideToggle();
-   $(this).find('img').toggle();
+$('#video-flip').click(function () {
+    $('#video-panel').slideToggle();
+    $(this).find('img').toggle();
 });
