@@ -4,37 +4,97 @@ jQuery(function ($) {
 
         $("#uff-followers").modal('show');
 
-        $.post(ajax_object.ajax_url,
-                {
-                    action: 'followers-ajax-action',
-                    follow_nonce: ajax_object.ajax_nonce,
-                    start: 0,
-                    length: 10
-                }, null, "json")
-                .done(function (response) {
-                    // console.log(response.data.followers);
-                    response.data.followers.forEach(function (element, index) {
-                        console.log(element);
+        var last_id = $("#modal-body .streamer-profile").last().attr("id");
+        
+        if (!parseInt(last_id)) {
 
-                        $("#streamer-profile-draft")
-                                .clone()
-                                .attr( "id", index)
-                                .css("display", "block")
-                                .appendTo("#modal-body");
-                        
-                        $("#"+index).find(".streamer-nicename").text(element['user_nicename']);
-                        $("#"+index).find(".streamer-email").text(element['user_email']);
-                    });
-                })
-                .fail(function () {
-                    alert("error");
-                })
+            $.post(ajax_object.ajax_url,
+                    {
+                        action: 'followers-ajax-action',
+                        follow_nonce: ajax_object.ajax_nonce,
+                        start: 0,
+                        length: 10
+                    }, null, "json")
+                    .done(function (response) {
+                        // console.log(response.data.followers);
+                        response.data.followers.forEach(function (element, index) {
+                          
+
+                            $("#streamer-profile-draft")
+                                    .clone()
+                                    .attr("id", index)
+                                    .css("display", "block")
+                                    .appendTo("#modal-body");
+
+                            $("#" + index).find(".streamer-nicename").text(element['user_nicename']);
+                            $("#" + index).find(".streamer-email").text(element['user_email']);
+                        });
+                    })
+                    .fail(function () {
+                        alert("error");
+                    })
+        }
     });
 
-
+    var ajax = true;
 
     $("#modal-body").scroll(function () {
-        console.log("scroll");
+
+        var position = $("#modal-body .streamer-profile").last().offset();
+        var scrollTop = $("#modal-body").scrollTop();
+
+
+        //console.log("scrollTop  " + scrollTop);
+        //console.log("last item  " + position.top);
+
+        if (scrollTop > position.top && ajax) {
+
+            ajax = false;
+
+            var last_id = $("#modal-body .streamer-profile").last().attr("id");
+            last_id = parseInt(last_id) + 1;
+
+            console.log("next down start id  " + last_id);
+
+            $.post(ajax_object.ajax_url,
+                    {
+                        action: 'followers-ajax-action',
+                        follow_nonce: ajax_object.ajax_nonce,
+                        start: last_id,
+                        length: 10
+                    }, null, "json")
+                    .done(function (response) {
+                        // console.log(response.data.followers);
+                        if (Array.isArray(response.data.followers)) {
+                            response.data.followers.forEach(function (element, index) {
+                                // console.log(element);
+
+                                var index_id = parseInt(last_id) + index;
+
+                                console.log("last_id " + index_id + " index " + index);
+
+                                $("#streamer-profile-draft")
+                                        .clone()
+                                        .attr("id", index_id)
+                                        .css("display", "block")
+                                        .appendTo("#modal-body");
+
+                                $("#" + index_id).find(".streamer-nicename").text(element['user_nicename']);
+                                $("#" + index_id).find(".streamer-email").text(element['user_email']);
+                            });
+
+                            ajax = true;
+                        }
+
+
+                    })
+                    .fail(function () {
+                        alert("error");
+                    })
+
+        }
+
+
     });
 
     if (following_object.following_users === "anonim") {

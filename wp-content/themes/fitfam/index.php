@@ -334,18 +334,6 @@
                 <img src="<?php bloginfo('template_directory'); ?>/img/thumbnail.png" class="img-responsive" alt="">
                 <p class="under-text">The right way to do pushups</p>
                 <p class="under-text-sub"><span class="gray">54.387 viewers on </span> TheMarkyB</p>
-                <button data-streamerID="2" class="btn">Follow me</button>
-            </div>
-            <div class="col-sm-4 col-xs-6 boxes-row">
-                <img src="<?php bloginfo('template_directory'); ?>/img/thumbnail.png" class="img-responsive" alt="">
-                <p class="under-text">The right way to do pushups</p>
-                <p class="under-text-sub"><span class="gray">54.387 viewers on </span> TheMarkyB</p>
-                <button data-streamerID="3" class="btn">Follow me</button>
-            </div>
-            <div class="col-sm-4 col-xs-6 boxes-row">
-                <img src="<?php bloginfo('template_directory'); ?>/img/thumbnail.png" class="img-responsive" alt="">
-                <p class="under-text">The right way to do pushups</p>
-                <p class="under-text-sub"><span class="gray">54.387 viewers on </span> TheMarkyB</p>
                 <button data-streamerID="3" class="btn">Follow me</button>
             </div>
             <div class="col-sm-4 col-xs-6 boxes-row">
@@ -354,21 +342,6 @@
                 <p class="under-text-sub"><span class="gray">54.387 viewers on </span> TheMarkyB</p>
                 <button data-streamerID="4" class="btn">Follow me</button>
             </div>
-            <div class="col-sm-4 col-xs-6 boxes-row">
-                <img src="<?php bloginfo('template_directory'); ?>/img/thumbnail.png" class="img-responsive" alt="">
-                <p class="under-text">The right way to do pushups</p>
-                <p class="under-text-sub"><span class="gray">54.387 viewers on </span> TheMarkyB</p>
-                <button data-streamerID="4" class="btn">Follow me</button>
-            </div>
-        </div>
-        <div class="row main-rows">
-            <div class="col-sm-12">
-                <img src="<?php bloginfo('template_directory'); ?>/img/black-arrow.png" class="img-responsive black-arrow hidden-xs" alt="">
-                <h1>Top Crossfit <span class="light-header">Channels</span><br class="visible-xs"><span class="sub-head">Top channels based on crossfit</span></h1>
-
-            </div>
-        </div>
-        <div class="row text-center">
             <div class="col-sm-4 col-xs-6 boxes-row">
                 <img src="<?php bloginfo('template_directory'); ?>/img/thumbnail.png" class="img-responsive" alt="">
                 <p class="under-text">The right way to do pushups</p>
@@ -387,6 +360,15 @@
                 <p class="under-text-sub"><span class="gray">54.387 viewers on </span> TheMarkyB</p>
                 <button data-streamerID="7" class="btn">Follow me</button>
             </div>
+        </div>
+        <div class="row main-rows">
+            <div class="col-sm-12">
+                <img src="<?php bloginfo('template_directory'); ?>/img/black-arrow.png" class="img-responsive black-arrow hidden-xs" alt="">
+                <h1>Top Crossfit <span class="light-header">Channels</span><br class="visible-xs"><span class="sub-head">Top channels based on crossfit</span></h1>
+
+            </div>
+        </div>
+        <div class="row text-center">
             <div class="col-sm-4 col-xs-6 boxes-row">
                 <img src="<?php bloginfo('template_directory'); ?>/img/thumbnail.png" class="img-responsive" alt="">
                 <p class="under-text">The right way to do pushups</p>
@@ -405,6 +387,24 @@
                 <p class="under-text-sub"><span class="gray">54.387 viewers on </span> TheMarkyB</p>
                 <button data-streamerID="10" class="btn">Follow me</button>
             </div>
+            <div class="col-sm-4 col-xs-6 boxes-row">
+                <img src="<?php bloginfo('template_directory'); ?>/img/thumbnail.png" class="img-responsive" alt="">
+                <p class="under-text">The right way to do pushups</p>
+                <p class="under-text-sub"><span class="gray">54.387 viewers on </span> TheMarkyB</p>
+                <button data-streamerID="11" class="btn">Follow me</button>
+            </div>
+            <div class="col-sm-4 col-xs-6 boxes-row">
+                <img src="<?php bloginfo('template_directory'); ?>/img/thumbnail.png" class="img-responsive" alt="">
+                <p class="under-text">The right way to do pushups</p>
+                <p class="under-text-sub"><span class="gray">54.387 viewers on </span> TheMarkyB</p>
+                <button data-streamerID="12" class="btn">Follow me</button>
+            </div>
+            <div class="col-sm-4 col-xs-6 boxes-row">
+                <img src="<?php bloginfo('template_directory'); ?>/img/thumbnail.png" class="img-responsive" alt="">
+                <p class="under-text">The right way to do pushups</p>
+                <p class="under-text-sub"><span class="gray">54.387 viewers on </span> TheMarkyB</p>
+                <button data-streamerID="13" class="btn">Follow me</button>
+            </div>
         </div>
         <div class="row main-rows">
             <div class="col-sm-12">
@@ -417,37 +417,37 @@
                 <img src="<?php bloginfo('template_directory'); ?>/img/thumbnail.png" class="img-responsive" alt="">
                 <p class="under-text">The right way to do pushups</p>
                 <p class="under-text-sub"><span class="gray">54.387 viewers on </span> TheMarkyB</p>
-                <button data-streamerID="2" class="btn">Follow me</button>
+                <button data-streamerID="14" class="btn">Follow me</button>
             </div>
             <div class="col-sm-4 col-xs-6 boxes-row">
                 <img src="<?php bloginfo('template_directory'); ?>/img/thumbnail.png" class="img-responsive" alt="">
                 <p class="under-text">The right way to do pushups</p>
                 <p class="under-text-sub"><span class="gray">54.387 viewers on </span> TheMarkyB</p>
-                <button data-streamerID="2" class="btn">Follow me</button>
+                <button data-streamerID="15" class="btn">Follow me</button>
             </div>
             <div class="col-sm-4 col-xs-6 boxes-row">
                 <img src="<?php bloginfo('template_directory'); ?>/img/thumbnail.png" class="img-responsive" alt="">
                 <p class="under-text">The right way to do pushups</p>
                 <p class="under-text-sub"><span class="gray">54.387 viewers on </span> TheMarkyB</p>
-                <button data-streamerID="2" class="btn">Follow me</button>
+                <button data-streamerID="16" class="btn">Follow me</button>
             </div>
             <div class="col-sm-4 col-xs-6 boxes-row">
                 <img src="<?php bloginfo('template_directory'); ?>/img/thumbnail.png" class="img-responsive" alt="">
                 <p class="under-text">The right way to do pushups</p>
                 <p class="under-text-sub"><span class="gray">54.387 viewers on </span> TheMarkyB</p>
-                <button data-streamerID="2" class="btn">Follow me</button>
+                <button data-streamerID="17" class="btn">Follow me</button>
             </div>
             <div class="col-sm-4 col-xs-6 boxes-row">
                 <img src="<?php bloginfo('template_directory'); ?>/img/thumbnail.png" class="img-responsive" alt="">
                 <p class="under-text">The right way to do pushups</p>
                 <p class="under-text-sub"><span class="gray">54.387 viewers on </span> TheMarkyB</p>
-                <button data-streamerID="2" class="btn">Follow me</button>
+                <button data-streamerID="19" class="btn">Follow me</button>
             </div>
             <div class="col-sm-4 col-xs-6 boxes-row">
                 <img src="<?php bloginfo('template_directory'); ?>/img/thumbnail.png" class="img-responsive" alt="">
                 <p class="under-text">The right way to do pushups</p>
                 <p class="under-text-sub"><span class="gray">54.387 viewers on </span> TheMarkyB</p>
-                <button data-streamerID="2" class="btn">Follow me</button>
+                <button data-streamerID="20" class="btn">Follow me</button>
             </div>
         </div>
     </div>
@@ -547,7 +547,6 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Send message</button>
             </div>
         </div>
     </div>
